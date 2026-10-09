@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Property | Hasaan Real Estate</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="d-flex">
+    <div id="sidebar-root"></div>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div id="content">
+        <div id="topbar-root"></div>
+
+        <div class="container-fluid p-4">
+            <div class="page-head">
+                <div>
+                    <div class="breadcrumb-app mb-1"><a href="dashboard.html">Dashboard</a> / <a href="properties.html">Properties</a> / Add Property</div>
+                    <h3 class="page-title mb-1">Add New Property</h3>
+                    <p class="text-muted small mb-0">Listing publish hogi website ke Properties section par.</p>
+                </div>
+                <a href="properties.html" class="btn-ghost"><i class="bi bi-arrow-left"></i> Back to Properties</a>
+            </div>
+
+            <form data-demo data-msg="Property published successfully (demo).">
+                <div class="row g-4">
+                    <!-- Main form -->
+                    <div class="col-12 col-xl-8">
+                        <div class="panel mb-4">
+                            <h5 class="panel-title mb-3">Basic Information</h5>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label class="field-label">Property Title *</label>
+                                    <input type="text" class="field" placeholder="e.g. 500 Sq. Yd. Modern Villa" required>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="field-label">Property Type *</label>
+                                    <select class="field" required>
+                                        <option value="">Select type</option>
+                                        <option>House</option>
+                                        <option>Apartment</option>
+                                        <option>Plot</option>
+                                        <option>Commercial</option>
+                                        <option>Office</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="field-label">Purpose *</label>
+                                    <select class="field" required>
+                                        <option value="">Select purpose</option>
+                                        <option>Buy (For Sale)</option>
+                                        <option>Rent (For Rent)</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="field-label">Location *</label>
+                                    <select class="field" required>
+                                        <option value="">Select area</option>
+                                        <option>DHA Karachi</option>
+                                        <option>Clifton</option>
+                                        <option>Bahria Town</option>
+                                        <option>PECHS</option>
+                                        <option>Gulshan-e-Iqbal</option>
+                                        <option>Gulistan-e-Jauhar</option>
+                                        <option>North Nazimabad</option>
+                                        <option>Other Karachi Areas</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="field-label">Phase / Block</label>
+                                    <input type="text" class="field" placeholder="e.g. Phase 7">
+                                </div>
+                                <div class="col-12">
+                                    <label class="field-label">Description *</label>
+                                    <textarea class="field" placeholder="Describe the property, its condition, surroundings and highlights..." required></textarea>
+                                    <div class="form-hint">Website par yeh description listing page par nazar aayegi.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel mb-4">
+                            <h5 class="panel-title mb-3">Price &amp; Size</h5>
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6">
+                                    <label class="field-label">Price (PKR) *</label>
+                                    <input type="text" class="field" placeholder="e.g. 225000000" required>
+                                    <div class="form-hint">Auto format: Rs 22.5 Crore / Rs 3.5 Lac per month</div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="field-label">Area / Size *</label>
+                                    <div class="d-flex gap-2">
+                                        <input type="text" class="field" placeholder="500" required>
+                                        <select class="field" style="max-width:130px;">
+                                            <option>Sq. Yd.</option>
+                                            <option>Sq. Ft.</option>
+                                            <option>Marla</option>
+                                            <option>Kanal</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <label class="field-label">Bedrooms</label>
+                                    <input type="number" class="field" placeholder="5" min="0">
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <label class="field-label">Bathrooms</label>
+                                    <input type="number" class="field" placeholder="6" min="0">
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <label class="field-label">Parking</label>
+                                    <input type="text" class="field" placeholder="3 Cars">
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <label class="field-label">Status</label>
+                                    <select class="field">
+                                        <option>Active</option>
+                                        <option>Pending</option>
+                                        <option>Sold / Rented</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <h5 class="panel-title mb-3">Features &amp; Media</h5>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label class="field-label">Key Features</label>
+                                    <input type="text" class="field" placeholder="Corner plot, Landscaped lawn, Servant quarters, Basement...">
+                                    <div class="form-hint">Comma se separate karein.</div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="field-label">Cover Image URL</label>
+                                    <input type="url" class="field" placeholder="https://images.unsplash.com/photo-...">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="field-label">Gallery Images (URLs)</label>
+                                    <input type="text" class="field" placeholder="Image 2 URL, Image 3 URL">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar options -->
+                    <div class="col-12 col-xl-4">
+                        <div class="panel mb-4">
+                            <h5 class="panel-title mb-3">Publishing</h5>
+                            <div class="setting-row">
+                                <div>
+                                    <div class="prop-title">Featured Property</div>
+                                    <div class="prop-loc">Homepage "Featured Properties" section mein show hogi</div>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-row">
+                                <div>
+                                    <div class="prop-title">Show Phone Number</div>
+                                    <div class="prop-loc">Listing par aapka number dikhega</div>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-row">
+                                <div>
+                                    <div class="prop-title">WhatsApp Button</div>
+                                    <div class="prop-loc">WhatsApp inquiry button enable</div>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="d-flex gap-2 mt-3">
+                                <button type="submit" class="btn-primary-app justify-content-center flex-grow-1"><i class="bi bi-check-lg"></i> Publish</button>
+                                <button type="button" class="btn-ghost justify-content-center" data-action-msg="Draft saved (demo).">Save Draft</button>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <h5 class="panel-title mb-3">Listing Tips</h5>
+                            <ul class="mb-0" style="font-size:0.83rem; color:var(--text-secondary); padding-left:18px; line-height:1.9;">
+                                <li>Clear title aur location (e.g. DHA Phase 7) zaroor likhein.</li>
+                                <li>Price real market rate ke mutabiq rakhein.</li>
+                                <li>Kam se kam 3 high-quality images lagayen.</li>
+                                <li>Features list buyer ka interest barhati hai.</li>
+                                <li>Publish ke baad website par foran live ho jayegi.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <p class="page-footer">&copy; 2026 Hasaan Real Estate &middot; Proprietor: Fahad Hussain &middot; Karachi, Pakistan</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

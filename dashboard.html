@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Hasaan Real Estate</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="d-flex">
+    <div id="sidebar-root"></div>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div id="content">
+        <div id="topbar-root"></div>
+
+        <div class="container-fluid p-4">
+            <!-- Header -->
+            <div class="page-head">
+                <div>
+                    <h3 class="page-title mb-1">Overview Dashboard</h3>
+                    <p class="text-muted small mb-0">Hasaan Real Estate &mdash; DHA Karachi, Clifton &amp; prime areas.</p>
+                </div>
+                <div class="d-flex gap-2">
+                    <a href="leads.html" class="btn-ghost"><i class="bi bi-inbox"></i> View Leads</a>
+                    <a href="add-property.html" class="btn-primary-app"><i class="bi bi-plus-lg"></i> Add New Property</a>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="row g-3 mb-4">
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="stat-card">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                                <div class="stat-label">TOTAL PROPERTIES</div>
+                                <div class="stat-value mt-1">8</div>
+                                <div class="stat-delta text-success mt-1"><i class="bi bi-arrow-up-short"></i>2 added this month</div>
+                            </div>
+                            <div class="icon-box" style="background:var(--primary-light); color:var(--primary);"><i class="bi bi-buildings"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="stat-card">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                                <div class="stat-label">FOR SALE</div>
+                                <div class="stat-value mt-1">5</div>
+                                <div class="stat-delta text-muted mt-1">Worth Rs 46.55 Crore</div>
+                            </div>
+                            <div class="icon-box" style="background:#f0fdf4; color:var(--success);"><i class="bi bi-tag-fill"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="stat-card">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                                <div class="stat-label">FOR RENT</div>
+                                <div class="stat-value mt-1">3</div>
+                                <div class="stat-delta text-muted mt-1">Rs 15.2 Lac / month</div>
+                            </div>
+                            <div class="icon-box" style="background:#fff7ed; color:#c2410c;"><i class="bi bi-key-fill"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="stat-card">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                                <div class="stat-label">NEW INQUIRIES</div>
+                                <div class="stat-value mt-1">12</div>
+                                <div class="stat-delta text-success mt-1"><i class="bi bi-arrow-up-short"></i>18% vs last week</div>
+                            </div>
+                            <div class="icon-box" style="background:#eff6ff; color:#0284c7;"><i class="bi bi-envelope-paper-fill"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Properties + Leads -->
+            <div class="row g-4 mb-4">
+                <div class="col-12 col-xl-8">
+                    <div class="panel">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="panel-title">Recent Properties</h5>
+                            <a href="properties.html" class="section-link">View All <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table align-middle table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Property</th>
+                                        <th>Purpose</th>
+                                        <th>Price</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=100&q=80" class="prop-thumb" alt="Modern Villa">
+                                                <div>
+                                                    <span class="prop-title d-block">500 Sq. Yd. Modern Villa</span>
+                                                    <span class="prop-loc">DHA Phase 7, Karachi &middot; 5 Bed</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge-soft badge-sale">Buy</span></td>
+                                        <td class="price-tag">Rs 22.5 Crore</td>
+                                        <td><span class="badge-soft badge-active">Active</span></td>
+                                        <td>
+                                            <a href="properties.html" class="btn-table" title="Edit"><i class="bi bi-pencil"></i></a>
+                                            <a href="#" class="btn-table danger" title="Delete" data-action-msg="Property deleted (demo)."><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=100&q=80" class="prop-thumb" alt="Sea-Facing Apartment">
+                                                <div>
+                                                    <span class="prop-title d-block">3 Bed Sea-Facing Apartment</span>
+                                                    <span class="prop-loc">Clifton, Karachi &middot; 2,500 Sq. Ft.</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge-soft badge-sale">Buy</span></td>
+                                        <td class="price-tag">Rs 4.9 Crore</td>
+                                        <td><span class="badge-soft badge-active">Active</span></td>
+                                        <td>
+                                            <a href="properties.html" class="btn-table" title="Edit"><i class="bi bi-pencil"></i></a>
+                                            <a href="#" class="btn-table danger" title="Delete" data-action-msg="Property deleted (demo)."><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=100&q=80" class="prop-thumb" alt="Commercial Shop">
+                                                <div>
+                                                    <span class="prop-title d-block">Ground Floor Commercial Shop</span>
+                                                    <span class="prop-loc">DHA Phase 6, Karachi &middot; 450 Sq. Ft.</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge-soft badge-rent">Rent</span></td>
+                                        <td class="price-tag">Rs 3.5 Lac/mo</td>
+                                        <td><span class="badge-soft badge-active">Active</span></td>
+                                        <td>
+                                            <a href="properties.html" class="btn-table" title="Edit"><i class="bi bi-pencil"></i></a>
+                                            <a href="#" class="btn-table danger" title="Delete" data-action-msg="Property deleted (demo)."><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=100&q=80" class="prop-thumb" alt="Residential Plot">
+                                                <div>
+                                                    <span class="prop-title d-block">300 Sq. Yd. Residential Plot</span>
+                                                    <span class="prop-loc">DHA Phase 8, Karachi &middot; Clear Title</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge-soft badge-sale">Buy</span></td>
+                                        <td class="price-tag">Rs 6.75 Crore</td>
+                                        <td><span class="badge-soft badge-pending">Pending</span></td>
+                                        <td>
+                                            <a href="properties.html" class="btn-table" title="Edit"><i class="bi bi-pencil"></i></a>
+                                            <a href="#" class="btn-table danger" title="Delete" data-action-msg="Property deleted (demo)."><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=100&q=80" class="prop-thumb" alt="Penthouse">
+                                                <div>
+                                                    <span class="prop-title d-block">Furnished Penthouse</span>
+                                                    <span class="prop-loc">Clifton, Karachi &middot; 4,000 Sq. Ft.</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge-soft badge-sale">Buy</span></td>
+                                        <td class="price-tag">Rs 8.2 Crore</td>
+                                        <td><span class="badge-soft badge-active">Active</span></td>
+                                        <td>
+                                            <a href="properties.html" class="btn-table" title="Edit"><i class="bi bi-pencil"></i></a>
+                                            <a href="#" class="btn-table danger" title="Delete" data-action-msg="Property deleted (demo)."><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-4">
+                    <div class="panel h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="panel-title">Latest Leads</h5>
+                            <a href="leads.html" class="section-link">View All</a>
+                        </div>
+
+                        <div>
+                            <div class="lead-item">
+                                <div class="lead-avatar">MA</div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <span class="lead-name">Muhammad Ahmed</span>
+                                        <span class="lead-time">10 min ago</span>
+                                    </div>
+                                    <p class="lead-msg">Interested in 500 Sq. Yd. Modern Villa, DHA Phase 7 &mdash; wants price negotiation.</p>
+                                    <span class="badge-soft badge-new me-1"><i class="bi bi-telephone me-1"></i>0300-1234567</span>
+                                    <span class="badge-soft badge-active"><i class="bi bi-whatsapp me-1"></i>WhatsApp</span>
+                                </div>
+                            </div>
+
+                            <div class="lead-item">
+                                <div class="lead-avatar">SK</div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <span class="lead-name">Sara Khan</span>
+                                        <span class="lead-time">2 hours ago</span>
+                                    </div>
+                                    <p class="lead-msg">Site visit tomorrow for the Clifton Sea-Facing Apartment.</p>
+                                    <span class="badge-soft badge-new"><i class="bi bi-telephone me-1"></i>0321-9876543</span>
+                                </div>
+                            </div>
+
+                            <div class="lead-item">
+                                <div class="lead-avatar">UT</div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <span class="lead-name">Usman Tariq</span>
+                                        <span class="lead-time">1 day ago</span>
+                                    </div>
+                                    <p class="lead-msg">Asking for discount on the DHA 8 Residential Plot (300 Sq. Yd.).</p>
+                                    <span class="badge-soft badge-new"><i class="bi bi-telephone me-1"></i>0333-4567890</span>
+                                </div>
+                            </div>
+
+                            <div class="lead-item">
+                                <div class="lead-avatar">RH</div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <span class="lead-name">Rehan &amp; Co. (Overseas)</span>
+                                        <span class="lead-time">2 days ago</span>
+                                    </div>
+                                    <p class="lead-msg">Needs video walkthrough of the PECHS Furnished Office Space for lease.</p>
+                                    <span class="badge-soft badge-featured"><i class="bi bi-globe me-1"></i>Overseas Client</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="leads.html" class="btn-ghost w-100 justify-content-center mt-3"><i class="bi bi-inbox"></i> Manage All Leads</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick actions + Areas -->
+            <div class="row g-4 mb-4">
+                <div class="col-12 col-xl-7">
+                    <div class="panel h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="panel-title">Website Services</h5>
+                            <a href="services.html" class="section-link">Manage</a>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="mini-card">
+                                    <div class="mc-icon"><i class="bi bi-house-door"></i></div>
+                                    <h6>Residential Sales</h6>
+                                    <p>Houses &amp; apartments across Karachi.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="mini-card">
+                                    <div class="mc-icon"><i class="bi bi-building"></i></div>
+                                    <h6>Commercial Sales &amp; Leasing</h6>
+                                    <p>Shops, offices &amp; investment options.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="mini-card">
+                                    <div class="mc-icon"><i class="bi bi-key"></i></div>
+                                    <h6>Rentals &amp; Tenant Matching</h6>
+                                    <p>Tenant screening &amp; agreements.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="mini-card">
+                                    <div class="mc-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                                    <h6>Valuation &amp; Advisory</h6>
+                                    <p>Comparative market analysis.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="mini-card">
+                                    <div class="mc-icon"><i class="bi bi-file-earmark-text"></i></div>
+                                    <h6>Transfer &amp; Documentation</h6>
+                                    <p>Transfer process &amp; verification.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="mini-card">
+                                    <div class="mc-icon"><i class="bi bi-airplane"></i></div>
+                                    <h6>Overseas Client Support</h6>
+                                    <p>Remote assistance &amp; PoA guidance.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-5">
+                    <div class="panel h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="panel-title">Areas Covered</h5>
+                            <a href="locations.html" class="section-link">All Locations</a>
+                        </div>
+                        <div class="d-flex flex-column gap-2">
+                            <div class="d-flex justify-content-between align-items-center p-3" style="border:1px solid var(--border); border-radius:12px;">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="mc-icon"><i class="bi bi-geo-alt"></i></span>
+                                    <div>
+                                        <div class="prop-title">DHA Karachi</div>
+                                        <div class="prop-loc">Karachi's established upscale hub</div>
+                                    </div>
+                                </div>
+                                <span class="badge-soft badge-sale">46 leads</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center p-3" style="border:1px solid var(--border); border-radius:12px;">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="mc-icon"><i class="bi bi-geo-alt"></i></span>
+                                    <div>
+                                        <div class="prop-title">Clifton</div>
+                                        <div class="prop-loc">Sea-facing apartments &amp; commercial</div>
+                                    </div>
+                                </div>
+                                <span class="badge-soft badge-sale">24 leads</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center p-3" style="border:1px solid var(--border); border-radius:12px;">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="mc-icon"><i class="bi bi-geo-alt"></i></span>
+                                    <div>
+                                        <div class="prop-title">Bahria Town</div>
+                                        <div class="prop-loc">Gated communities &amp; amenities</div>
+                                    </div>
+                                </div>
+                                <span class="badge-soft badge-sale">18 leads</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center p-3" style="border:1px solid var(--border); border-radius:12px;">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="mc-icon"><i class="bi bi-geo-alt"></i></span>
+                                    <div>
+                                        <div class="prop-title">PECHS</div>
+                                        <div class="prop-loc">Centrally located residential blocks</div>
+                                    </div>
+                                </div>
+                                <span class="badge-soft badge-sale">12 leads</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact strip -->
+            <div class="contact-strip mb-2">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-4">
+                    <div>
+                        <div class="cs-label mb-1">Office</div>
+                        <div class="cs-value">Shop# SF-2, Tooba Apartment, DHA Phase I Garden, Karachi</div>
+                        <div class="mt-2" style="font-size:0.8rem; color:#93a5c1;">
+                            <i class="bi bi-clock me-1"></i> Mon&ndash;Sat, 10:00 AM &ndash; 7:00 PM
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap gap-4">
+                        <div>
+                            <div class="cs-label mb-1">Phone</div>
+                            <a href="tel:03003084176" class="cs-value text-decoration-none">0300-3084176</a>
+                            <div class="cs-value" style="font-size:0.82rem; color:#cbd5e1;">0333-3477745</div>
+                        </div>
+                        <div>
+                            <div class="cs-label mb-1">Email</div>
+                            <a href="mailto:fahadjunejo7@gmail.com" class="cs-value text-decoration-none">fahadjunejo7@gmail.com</a>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="rating-pill"><i class="bi bi-star-fill text-warning"></i> 5.0 Google Rating</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="page-footer">&copy; 2026 Hasaan Real Estate &middot; Proprietor: Fahad Hussain &middot; Karachi, Pakistan</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

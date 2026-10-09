@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locations | Hasaan Real Estate</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="d-flex">
+    <div id="sidebar-root"></div>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div id="content">
+        <div id="topbar-root"></div>
+
+        <div class="container-fluid p-4">
+            <div class="page-head">
+                <div>
+                    <div class="breadcrumb-app mb-1"><a href="dashboard.html">Dashboard</a> / Locations</div>
+                    <h3 class="page-title mb-1">Locations We Serve</h3>
+                    <p class="text-muted small mb-0">8 areas jo website ke "Serving Karachi's Prime Locations" section par publish hain.</p>
+                </div>
+                <div class="d-flex gap-2">
+                    <a href="https://hasaanrealestate.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-ghost"><i class="bi bi-globe2"></i> View on Website</a>
+                    <a href="#" class="btn-primary-app" data-action-msg="New location form opened (demo)."><i class="bi bi-plus-lg"></i> Add Location</a>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="stat-card">
+                        <div class="stat-label">LOCATIONS</div>
+                        <div class="stat-value mt-1">8</div>
+                        <div class="stat-delta text-muted mt-1">Karachi areas covered</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="stat-card">
+                        <div class="stat-label">PRIMARY FOCUS</div>
+                        <div class="stat-value mt-1" style="font-size:1.2rem; padding-top:8px;">DHA, Clifton,<br>Bahria Town</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="stat-card">
+                        <div class="stat-label">PROPERTIES LISTED</div>
+                        <div class="stat-value mt-1">8</div>
+                        <div class="stat-delta text-muted mt-1">Across 4 areas</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="stat-card">
+                        <div class="stat-label">TOTAL LEADS</div>
+                        <div class="stat-value mt-1">128</div>
+                        <div class="stat-delta text-success mt-1">All locations combined</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="panel h-100">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="mc-icon"><i class="bi bi-geo-alt"></i></span>
+                                <h5 class="panel-title">DHA Karachi</h5>
+                            </div>
+                            <span class="badge-soft badge-sale">46 leads</span>
+                        </div>
+                        <p style="font-size:0.85rem; color:var(--text-secondary);">Karachi's most established upscale residential and commercial hub.</p>
+                        <div class="d-flex justify-content-between align-items-center pt-3" style="border-top:1px solid var(--border);">
+                            <span class="prop-loc">4 properties listed</span>
+                            <a href="properties.html" class="section-link">View <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="panel h-100">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="mc-icon"><i class="bi bi-geo-alt"></i></span>
+                                <h5 class="panel-title">Clifton</h5>
+                            </div>
+                            <span class="badge-soft badge-sale">24 leads</span>
+                        </div>
+                        <p style="font-size:0.85rem; color:var(--text-secondary);">Sea-facing apartments and prime commercial addresses.</p>
+                        <div class="d-flex justify-content-between align-items-center pt-3" style="border-top:1px solid var(--border);">
+                            <span class="prop-loc">2 properties listed</span>
+                            <a href="properties.html" class="section-link">View <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="panel h-100">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="mc-icon"><i class="bi bi-geo-alt"></i></span>
+                                <h5 class="panel-title">Bahria Town</h5>
+                            </div>
+                            <span class="badge-soft badge-sale">18 leads</span>
+                        </div>
+                        <p style="font-size:0.85rem; color:var(--text-secondary);">Gated communities with planned infrastructure and amenities.</p>
+                        <div class="d-flex justify-content-between align-items-center pt-3" style="border-top:1px solid var(--border);">
+                            <span class="prop-loc">1 property listed</span>
+                            <a href="properties.html" class="section-link">View <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="panel h-100">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="mc-icon"><i class="bi bi-geo-alt"></i></span>
+                                <h5 class="panel-title">PECHS</h5>
+                            </div>
+                            <span class="badge-soft badge-sale">12 leads</span>
+                        </div>
+                        <p style="font-size:0.85rem; color:var(--text-secondary);">Centrally located, established residential blocks.</p>
+                        <div class="d-flex justify-content-between align-items-center pt-3" style="border-top:1px solid var(--border);">
+                            <span class="prop-loc">1 property listed</span>
+                            <a href="properties.html" class="section-link">View <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="panel h-100">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="mc-icon"><i class="bi bi-geo-alt"></i></span>
+                                <h5 class="panel-title">Gulshan-e-Iqbal</h5>
+                            </div>
+                            <span class="badge-soft badge-sale">9 leads</span>
+                        </div>
+                        <p style="font-size:0.85rem; color:var(--text-secondary);">Well-connected residential neighbourhoods near major roads.</p>
+                        <div class="d-flex justify-content-between align-items-center pt-3" style="border-top:1px solid var(--border);">
+                            <span class="prop-loc">No listings yet</span>
+                            <a href="add-property.html" class="section-link">Add <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="panel h-100">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="mc-icon"><i class="bi bi-geo-alt"></i></span>
+                                <h5 class="panel-title">Gulistan-e-Jauhar</h5>
+                            </div>
+                            <span class="badge-soft badge-sale">7 leads</span>
+                        </div>
+                        <p style="font-size:0.85rem; color:var(--text-secondary);">Growing residential sector with a wide range of price points.</p>
+                        <div class="d-flex justify-content-between align-items-center pt-3" style="border-top:1px solid var(--border);">
+                            <span class="prop-loc">No listings yet</span>
+                            <a href="add-property.html" class="section-link">Add <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="panel h-100">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="mc-icon"><i class="bi bi-geo-alt"></i></span>
+                                <h5 class="panel-title">North Nazimabad</h5>
+                            </div>
+                            <span class="badge-soft badge-sale">7 leads</span>
+                        </div>
+                        <p style="font-size:0.85rem; color:var(--text-secondary);">Established residential area with a strong resale market.</p>
+                        <div class="d-flex justify-content-between align-items-center pt-3" style="border-top:1px solid var(--border);">
+                            <span class="prop-loc">No listings yet</span>
+                            <a href="add-property.html" class="section-link">Add <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="panel h-100">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="mc-icon"><i class="bi bi-geo-alt"></i></span>
+                                <h5 class="panel-title">Other Karachi Areas</h5>
+                            </div>
+                            <span class="badge-soft badge-pending">5 leads</span>
+                        </div>
+                        <p style="font-size:0.85rem; color:var(--text-secondary);">Additional neighbourhoods available on request.</p>
+                        <div class="d-flex justify-content-between align-items-center pt-3" style="border-top:1px solid var(--border);">
+                            <span class="prop-loc">On request</span>
+                            <a href="#" class="section-link" data-action-msg="Edit location (demo).">Edit <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="page-footer">&copy; 2026 Hasaan Real Estate &middot; Proprietor: Fahad Hussain &middot; Karachi, Pakistan</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>
