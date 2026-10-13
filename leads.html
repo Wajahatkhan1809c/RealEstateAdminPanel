@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inquiries / Leads | Hasaan Real Estate</title>
+    <title>Contact Messages | Hasaan Real Estate</title>
 
+    <link rel="icon" type="image/jpeg" href="logo.jpeg">
+    <link rel="apple-touch-icon" href="logo.jpeg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -22,9 +24,9 @@
         <div class="container-fluid p-4">
             <div class="page-head">
                 <div>
-                    <div class="breadcrumb-app mb-1"><a href="Index.html">Dashboard</a> / Inquiries &amp; Leads</div>
-                    <h3 class="page-title mb-1">Inquiries / Leads</h3>
-                    <p class="text-muted small mb-0">Website contact form, WhatsApp aur phone se aane wali inquiries.</p>
+                    <div class="breadcrumb-app mb-1"><a href="dashboard.html">Dashboard</a> / Contact Messages</div>
+                    <h3 class="page-title mb-1">Contact Messages</h3>
+                    <p class="text-muted small mb-0">Website contact form, WhatsApp aur phone se aane wale messages aur property inquiries.</p>
                 </div>
                 <div class="d-flex gap-2">
                     <a href="https://wa.me/923003084176" target="_blank" rel="noopener noreferrer" class="btn-ghost"><i class="bi bi-whatsapp"></i> WhatsApp</a>
@@ -36,7 +38,7 @@
             <div class="row g-3 mb-4">
                 <div class="col-12 col-sm-6 col-xl-3">
                     <div class="stat-card">
-                        <div class="stat-label">TOTAL INQUIRIES</div>
+                        <div class="stat-label">TOTAL MESSAGES</div>
                         <div class="stat-value mt-1">128</div>
                         <div class="stat-delta text-success mt-1"><i class="bi bi-arrow-up-short"></i>18% vs last week</div>
                     </div>
@@ -44,22 +46,22 @@
                 <div class="col-12 col-sm-6 col-xl-3">
                     <div class="stat-card">
                         <div class="stat-label">NEW (UNREAD)</div>
-                        <div class="stat-value mt-1">12</div>
+                        <div class="stat-value mt-1">8</div>
                         <div class="stat-delta text-muted mt-1">Avg. response 15 min</div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-xl-3">
                     <div class="stat-card">
-                        <div class="stat-label">SITE VISITS SCHEDULED</div>
-                        <div class="stat-value mt-1">7</div>
-                        <div class="stat-delta text-muted mt-1">This week</div>
+                        <div class="stat-label">REPLIED</div>
+                        <div class="stat-value mt-1">96</div>
+                        <div class="stat-delta text-muted mt-1">This month</div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-xl-3">
                     <div class="stat-card">
-                        <div class="stat-label">CLOSED / CONVERTED</div>
-                        <div class="stat-value mt-1">31</div>
-                        <div class="stat-delta text-success mt-1">24% conversion</div>
+                        <div class="stat-label">ARCHIVED</div>
+                        <div class="stat-value mt-1">24</div>
+                        <div class="stat-delta text-success mt-1">Resolved &amp; closed</div>
                     </div>
                 </div>
             </div>
@@ -69,7 +71,7 @@
                 <button class="filter-chip active" data-filter="all">All</button>
                 <button class="filter-chip" data-filter="new">New</button>
                 <button class="filter-chip" data-filter="contacted">Contacted</button>
-                <button class="filter-chip" data-filter="visit">Visit Scheduled</button>
+                <button class="filter-chip" data-filter="replied">Replied</button>
                 <button class="filter-chip" data-filter="closed">Closed</button>
             </div>
 
@@ -110,7 +112,7 @@
                                     <a href="#" class="btn-table" title="Mark contacted" data-action-msg="Lead marked as contacted (demo)."><i class="bi bi-check2"></i></a>
                                 </td>
                             </tr>
-                            <tr data-tags="visit">
+                            <tr data-tags="replied">
                                 <td>
                                     <div class="d-flex align-items-center gap-2">
                                         <div class="lead-avatar">SK</div>
@@ -125,7 +127,7 @@
                                     <div style="font-size:0.83rem;">0321-9876543</div>
                                     <span class="badge-soft badge-sale">Call</span>
                                 </td>
-                                <td><span class="badge-soft badge-active">Visit Scheduled</span></td>
+                                <td><span class="badge-soft badge-active">Replied</span></td>
                                 <td class="prop-loc">2 hours ago</td>
                                 <td class="text-nowrap">
                                     <a href="tel:03219876543" class="btn-table" title="Call"><i class="bi bi-telephone"></i></a>
@@ -178,7 +180,7 @@
                                     <a href="#" class="btn-table" title="Mark contacted" data-action-msg="Lead marked as contacted (demo)."><i class="bi bi-check2"></i></a>
                                 </td>
                             </tr>
-                            <tr data-tags="visit">
+                            <tr data-tags="replied">
                                 <td>
                                     <div class="d-flex align-items-center gap-2">
                                         <div class="lead-avatar">FA</div>
@@ -193,7 +195,7 @@
                                     <div style="font-size:0.83rem;">0345-1122334</div>
                                     <span class="badge-soft badge-active">WhatsApp</span>
                                 </td>
-                                <td><span class="badge-soft badge-active">Visit Scheduled</span></td>
+                                <td><span class="badge-soft badge-active">Replied</span></td>
                                 <td class="prop-loc">3 days ago</td>
                                 <td class="text-nowrap">
                                     <a href="tel:03451122334" class="btn-table" title="Call"><i class="bi bi-telephone"></i></a>

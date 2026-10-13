@@ -1,19 +1,21 @@
 (function () {
-    var PAGE = location.pathname.split('/').pop() || 'Index.html';
+    var PAGE = location.pathname.split('/').pop() || 'dashboard.html';
 
     var mainNav = [
-        { href: 'Index.html', icon: 'bi-grid-fill', label: 'Dashboard' },
-        { href: 'properties.html', icon: 'bi-houses-fill', label: 'All Properties', badge: '8', badgeClass: 'bg-primary' },
-        { href: 'featured.html', icon: 'bi-star-fill', label: 'Featured', badge: '6', badgeClass: 'bg-warning text-dark' },
-        { href: 'add-property.html', icon: 'bi-plus-circle-fill', label: 'Add Property' },
-        { href: 'leads.html', icon: 'bi-chat-left-dots-fill', label: 'Inquiries / Leads', badge: '12', badgeClass: 'bg-danger' }
+        { href: 'dashboard.html', icon: 'bi-grid-fill', label: 'Dashboard' },
+        { href: 'properties.html', icon: 'bi-houses-fill', label: 'All Properties', badge: '10', badgeClass: 'badge-gold' },
+        { href: 'featured.html', icon: 'bi-star-fill', label: 'Featured', badge: '6', badgeClass: 'badge-navy' },
+        { href: 'add-property.html', icon: 'bi-plus-circle-fill', label: 'Add Property' }
     ];
 
-    var webNav = [
-        { href: 'services.html', icon: 'bi-gear-fill', label: 'Services (6)' },
-        { href: 'locations.html', icon: 'bi-geo-alt-fill', label: 'Locations' },
-        { href: 'testimonials.html', icon: 'bi-star-fill', label: 'Testimonials' },
-        { href: 'agents.html', icon: 'bi-people-fill', label: 'Agents' }
+    var contentNav = [
+        { href: 'testimonials.html', icon: 'bi-chat-quote-fill', label: 'Testimonials' },
+        { href: 'services.html', icon: 'bi-gear-fill', label: 'Services (6)' }
+    ];
+
+    var msgNav = [
+        { href: 'leads.html', icon: 'bi-envelope-fill', label: 'Contact Messages', badge: '8', badgeClass: 'badge-gold' },
+        { href: 'consultations.html', icon: 'bi-calendar-check-fill', label: 'Consultations', badge: '4', badgeClass: 'badge-navy' }
     ];
 
     var settingsNav = [
@@ -35,7 +37,7 @@
         root.innerHTML =
             '<nav id="sidebar" class="d-flex flex-column">' +
                 '<div class="brand-block">' +
-                    '<div class="brand-icon"><i class="bi bi-buildings-fill"></i></div>' +
+                    '<div class="brand-logo"><img src="logo.jpeg" alt="Hasaan Real Estate"></div>' +
                     '<div>' +
                         '<div class="brand-name">Hasaan Real Estate</div>' +
                         '<div class="brand-tagline">Sale, Purchase &amp; Rent</div>' +
@@ -43,16 +45,14 @@
                 '</div>' +
                 '<ul class="nav flex-column mt-3 flex-grow-1">' +
                     mainNav.map(navLink).join('') +
-                    '<li class="sidebar-section">Website</li>' +
-                    webNav.map(navLink).join('') +
+                    '<li class="sidebar-section">Website Content</li>' +
+                    contentNav.map(navLink).join('') +
+                    '<li class="sidebar-section">Messages</li>' +
+                    msgNav.map(navLink).join('') +
                     '<li class="sidebar-section">Settings</li>' +
                     settingsNav.map(navLink).join('') +
                     '<li class="nav-item"><a href="#" class="nav-link text-danger"><i class="bi bi-box-arrow-right"></i> Logout</a></li>' +
                 '</ul>' +
-                '<div class="sidebar-footer">' +
-                    '<a class="live-site-btn" href="https://hasaanrealestate.vercel.app/" target="_blank" rel="noopener noreferrer">' +
-                        '<i class="bi bi-globe2"></i> Visit Live Website</a>' +
-                '</div>' +
             '</nav>';
     }
 
@@ -66,7 +66,7 @@
                     '<form class="d-none d-md-flex search-box ms-2" data-demo data-msg="Search is a demo feature.">' +
                         '<div class="input-group">' +
                             '<span class="input-group-text"><i class="bi bi-search"></i></span>' +
-                            '<input class="form-control" type="search" placeholder="Search properties, leads...">' +
+                            '<input class="form-control" type="search" placeholder="Search properties, testimonials, messages...">' +
                         '</div>' +
                     '</form>' +
                     '<div class="d-flex align-items-center gap-2 ms-auto">' +
@@ -74,20 +74,20 @@
                         '<div class="dropdown">' +
                             '<button class="icon-btn position-relative" data-bs-toggle="dropdown" aria-expanded="false">' +
                                 '<i class="bi bi-bell"></i>' +
-                                '<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:10px;">3</span>' +
+                                '<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:10px;">12</span>' +
                             '</button>' +
                             '<ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">' +
-                                '<li><h6 class="dropdown-header">New Leads</h6></li>' +
-                                '<li><a class="dropdown-item small" href="leads.html">New inquiry for 500 Sq. Yd. Modern Villa (DHA 7)</a></li>' +
-                                '<li><a class="dropdown-item small" href="leads.html">Site visit request - Clifton Sea-Facing Apartment</a></li>' +
-                                '<li><a class="dropdown-item small" href="leads.html">Rental inquiry for DHA 6 Commercial Shop</a></li>' +
+                                '<li><h6 class="dropdown-header">New Messages</h6></li>' +
+                                '<li><a class="dropdown-item small" href="leads.html">Contact: inquiry for 500 Sq. Yd. Modern Villa (DHA 7)</a></li>' +
+                                '<li><a class="dropdown-item small" href="leads.html">Contact: details request - Clifton Sea-Facing Apartment</a></li>' +
+                                '<li><a class="dropdown-item small" href="consultations.html">Consultation: booking request (Investment)</a></li>' +
                                 '<li><hr class="dropdown-divider"></li>' +
-                                '<li><a class="dropdown-item text-center small text-primary fw-semibold" href="leads.html">View all</a></li>' +
+                                '<li><a class="dropdown-item text-center small fw-semibold" style="color:var(--primary);" href="leads.html">View all messages</a></li>' +
                             '</ul>' +
                         '</div>' +
                         '<div class="dropdown">' +
                             '<a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">' +
-                                '<img src="https://ui-avatars.com/api/?name=Fahad+Hussain&background=1d4ed8&color=fff" alt="admin" width="38" height="38" class="rounded-circle me-2">' +
+                                '<img src="https://ui-avatars.com/api/?name=Fahad+Hussain&background=B89A61&color=fff" alt="admin" width="38" height="38" class="rounded-circle me-2">' +
                                 '<div class="d-none d-sm-block text-start">' +
                                     '<span class="fw-semibold d-block" style="font-size:0.9rem;">Fahad Hussain</span>' +
                                     '<small class="text-muted" style="font-size:0.72rem;">Proprietor</small>' +
