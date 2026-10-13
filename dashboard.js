@@ -1,8 +1,8 @@
 (function () {
-    var PAGE = location.pathname.split('/').pop() || 'dashboard.html';
+    var PAGE = location.pathname.split('/').pop() || 'index.html';
 
     var mainNav = [
-        { href: 'dashboard.html', icon: 'bi-grid-fill', label: 'Dashboard' },
+        { href: 'index.html', icon: 'bi-grid-fill', label: 'Dashboard' },
         { href: 'properties.html', icon: 'bi-houses-fill', label: 'All Properties', badge: '10', badgeClass: 'badge-gold' },
         { href: 'featured.html', icon: 'bi-star-fill', label: 'Featured', badge: '6', badgeClass: 'badge-navy' },
         { href: 'add-property.html', icon: 'bi-plus-circle-fill', label: 'Add Property' }
